@@ -1,0 +1,12 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+mat-toolbar{
+  width: 100%;
+  margin: auto !important;
+}
+@media (max-width: 767px){
+  mat-toolbar{
+    width: 160%;
+  }
+}

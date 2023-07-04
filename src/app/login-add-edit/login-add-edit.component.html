@@ -1,0 +1,42 @@
+<!-- title -->
+<div mat-dialog-title>
+    <h1>Login Form</h1>
+</div>
+
+<!-- formulario -->
+<form [formGroup]="loginForm" (ngSubmit)="onFormSubmit()">
+<div mat-dialog-content class="content">
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput type="text" placeholder="Alberto" formControlName="firstname">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Apellido</mat-label>
+            <input matInput type="text" placeholder="Lopez" formControlName="lastname">
+          </mat-form-field>
+    </div>
+
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Correo</mat-label>
+            <input matInput type="email" placeholder="example@gmail.com" formControlName="email">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input matInput type="text" formControlName="password">
+          </mat-form-field>
+    </div>
+
+    <div class="row">
+
+    </div>
+</div>
+
+
+<!-- botones -->
+<div mat-dialog-actions class="action">
+    <button mat-raised-button type="button" [mat-dialog-close]="false">Cancelar</button>
+    <button mat-raised-button color="primary" type="submit">{{data ? 'Actualizar':'Guardar'}}</button>
+</div>
+</form>
